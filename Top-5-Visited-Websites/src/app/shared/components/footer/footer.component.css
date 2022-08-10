@@ -1,0 +1,16 @@
+footer {
+    padding: 20px;
+
+}
+
+.grad {
+    background: #FFFAF1;
+    /* background: -moz-linear-gradient(45deg, #F0FAFF 0%, #F99FC1 0%, #7EBFFF 100%);
+    background: -webkit-linear-gradient(45deg, #F0FAFF 0%, #F99FC1 0%, #7EBFFF 100%);
+    background: linear-gradient(45deg, #F0FAFF 0%, #F99FC1 0%, #7EBFFF 100%); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+

@@ -1,0 +1,65 @@
+<!-- Header  -->
+<!-- <header id="header" class="shadow grad">
+    
+</header> -->
+<app-header (toggleSideBarFromHeader)="sideBarToggler($event)">Header Section</app-header>
+
+<mat-divider></mat-divider>
+
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-sidebar>Sidebar Section</app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<mat-divider></mat-divider>
+
+<app-footer>Footer Section</app-footer>
+
+<!-- <dashboard></dashboard> -->
+
+<!-- <div>
+    <button (click)="getPosts()">Get Posts</button>
+    <div *ngFor="let post of posts | async">
+        {{ post | json}}
+    </div>
+</div> -->
+
+<!-- <div>
+    <button (click)="createPost()">Create Posts</button>
+    <div>
+        {{ newPost | async | json}}
+    </div>
+</div> -->
+
+<!-- <section>
+    <div class="center-text">
+        <p>This is for form inputs</p>
+    </div>
+</section>
+
+<section>
+    <div class="center-text">
+        <span>To display graph reports</span>
+        <button mat-raised-button color="primary">Test</button>
+    </div>
+</section>
+
+<section>
+    <div class="center-text">
+        <p>To display website information</p>
+    </div>
+</section>
+
+<section>
+    <div class="center-text">
+        <p>This is for form inputs</p>
+    </div>
+</section> -->
+
+
+
+

@@ -1,0 +1,36 @@
+<!-- <p>column works!</p> -->
+
+<!-- <highcharts-chart 
+  [Highcharts]="Highcharts"
+
+  [options]="chartOptions"
+
+  style="width: 1200px; height: 400px; display: flex; justify-content: center; padding: 30px;"
+></highcharts-chart> -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- <script src="path/to/chartjs/dist/chart.js"></script> -->
+<!-- <h2>{{test}}</h2> -->
+<mat-progress-spinner *ngIf="presentLoading" mode="indeterminate" ></mat-progress-spinner>
+
+<div  style="width: 1000px; height: 100%;">
+  <div class="display-date" *ngIf="divDisplayDate">
+    <Label>Date To Review Report: </Label>
+    <h2>{{this.displayDate}}</h2>
+  </div>
+
+  <div class="display-date" *ngIf="divDisplayWebsite">
+    <Label>Website To Review Report: </Label>
+    <h2>{{this.displayWebsite}}</h2>
+  </div>
+
+  <div>
+    <div>
+      <canvas id="canvas1" ></canvas>
+    </div>
+  </div>
+
+  <div *ngIf="appear" class="button-container">
+    <button class='btn btn-primary' (click)="destroyCanvas()">Reset</button>
+  </div>
+
+</div>

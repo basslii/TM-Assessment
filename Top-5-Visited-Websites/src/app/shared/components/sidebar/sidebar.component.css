@@ -1,0 +1,26 @@
+.profile-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.img-profile {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+mat-divider {
+    border-top-color: #828385;
+}
+
+h2.mat-subheader {
+    color: #545559;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a.mat-list-item {
+    color: black;
+    font-size: 12px;
+}

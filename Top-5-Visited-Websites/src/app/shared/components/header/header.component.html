@@ -1,0 +1,42 @@
+<!-- <p>header works!</p> -->
+<!-- <header id="header" class="shadow grad">
+    <nav class="container navbar">
+        <a class="nav-brand text-dark">
+            Website Reports
+        </a>
+    </nav>
+</header> -->
+<mat-toolbar class="grad">
+    <mat-toolbar-row>
+        <button mat-icon-button class="clean-look" (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="clean-title">Get Reports</span>
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px" class="clean-look" style="padding-left: 0px;">
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>help_outline</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="menu" style="padding-right: 0px; padding-left: 0px; right: 10px;">
+                        <mat-icon>person_outline</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            Sign Out
+                        </button>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-divider></mat-divider>

@@ -1,0 +1,75 @@
+<!-- <p style="color: black;">dashboard works!</p> -->
+
+<div style="color: black;">
+    
+    <mat-progress-spinner mode="indeterminate" *ngIf="presentLoading"></mat-progress-spinner>
+    <!-- Options to filter graph they wanna see <br>
+    based on dates, websites -->
+    <label class="title-label">Find Information Based On:</label>
+    <h4 style="margin: 0px">Please Select One of the Options. You are not allowed to select Both.</h4>
+    <h4 style="color:coral">Click reset button to change filter option</h4>
+    <form [formGroup]="filterForm" class="form-group">
+        <ng-container>
+            <div class="row">
+                <div class="col">
+                    <label class="label-input">Date:</label>
+                    <!-- <input type="date" formControlName="date" class="form-control" min='2013-01-01' max='2013-01-31' (change)="dateChange(this.filterForm.get('date')?.value)"> -->
+                    <select type="text" formControlName="date" class="form-control" (change)="dateChange(this.filterForm.get('date')?.value)" (click)="toDisableWebIn()">
+                        <option *ngFor="let date of this.selectDropDownDate" value={{date}}>{{date}}</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label class="label-input">Website:</label>
+                    <select type="text" formControlName="website" class="form-control" (change)="websiteNameChange(this.filterForm.get('website')?.value)" (click)="toDisableDateIn()">
+                        <option *ngFor="let web of this.dropDownWebName" value={{web}}>{{web}}</option>
+                    </select>
+                </div>
+                <!-- <div class="col">
+                    <label class="label-input">Visits:</label>
+                    <input type="text"formControlName="visits" class="form-control">
+                </div> -->
+            </div>
+        </ng-container>
+    </form>
+</div>
+
+<mat-divider></mat-divider>
+
+<!-- <div style="color: black;">
+    <div>Line Chart</div>
+    <div>Line Chart</div>
+    <div>Line Chart</div>
+    <div>Line Chart</div>
+    <div>Line Chart</div>
+</div> -->
+<div *ngIf="!presentLoading" style="color: black;">
+    <!-- <highcharts-chart 
+    [Highcharts]="Highcharts" 
+    [options]="chartOptions" 
+    style="width: 100%; height: 400px; display: block;"
+    ></highcharts-chart> -->
+    <app-widget-column 
+        *ngIf = "match"
+        [inputWebsite] = "inputWebsiteFromDash"
+        [inputDate] = "inputDateFromDash"
+        [filterForm] = "filterFormDash"
+        [url] = "url"
+        [localurl] = "localurl"
+        (toDashComp) = "resetFormHandler($event)"
+        style="display: flex; flex-direction: row; justify-content: center; height: 650px;"
+    ></app-widget-column>
+    
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="info-container" style="color: black;">
+    
+    <label>Things to add on:</label>
+    <h2>1. filter data based on year, month, weekly, and daily visits </h2>
+    <h2>2. Get Data on the website(date created, created by whom, and etc) from public api</h2>
+    <h2>3. Display pie charts and table rbased on the filter</h2>
+    <h2>4. Create signin and signup page</h2>
+    <h2>5. Create profile page</h2>
+    <h2>6. Create article page</h2>
+</div>
